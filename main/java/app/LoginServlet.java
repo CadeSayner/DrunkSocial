@@ -25,7 +25,7 @@ public class LoginServlet extends HttpServlet {
     
     public void init()
     {
-    	loginDao = new LoginDaoMySql();
+    	loginDao = new LoginDao();
     }
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,7 +39,7 @@ public class LoginServlet extends HttpServlet {
 				// Add username to the session
 				HttpSession session = request.getSession();
 				session.setAttribute("user_name", name);
-				response.sendRedirect("userLoginLandingPage.jsp");
+				response.sendRedirect("home.jsp");
 			}
 			else
 			{

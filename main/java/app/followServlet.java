@@ -10,18 +10,18 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import database.RegisterDao;
+import database.FollowingDao;
 
 /**
  * Servlet implementation class followServlet
  */
 @WebServlet("/follow")
-public class followServlet extends HttpServlet {
+public class FollowServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private RegisterDao rd;
+	private FollowingDao rd;
 	public void init()
 	{
-		rd = new RegisterDao();
+		rd = new FollowingDao();
 	}
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

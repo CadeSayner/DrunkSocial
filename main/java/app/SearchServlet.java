@@ -12,15 +12,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import database.RegisterDao;
+import database.UsersDao;
 
 /**
  * Servlet implementation class SearchServlet
  */
 public class SearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private RegisterDao rd;
+    private UsersDao rd;
 	public void init() {
-		rd = new RegisterDao();
+		rd = new UsersDao();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
